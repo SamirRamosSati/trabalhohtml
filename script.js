@@ -159,10 +159,18 @@ function toggleEstoque(cat, index) {
   saveToStorage(STORAGE_KEY, produtos);
   renderProducts();
 }
-let pendingDelete = null;
 function openConfirm(cat, index) {
-  pendingDelete = { cat, index };
-  alert("Confirme exclusão no botão de confirmação!");
+  // Usar confirmação nativa e excluir imediatamente se confirmada
+  const ok = confirm("Tem certeza que deseja excluir este produto?");
+  if (!ok) return;
+  if (produtos[cat] && produtos[cat][index] !== undefined) {
+    produtos[cat].splice(index, 1);
+    saveToStorage(STORAGE_KEY, produtos);
+    renderProducts();
+    alert("Produto excluído");
+  } else {
+    alert("Produto não encontrado");
+  }
 }
 document
   .getElementById("searchInput")
@@ -389,3 +397,7 @@ if (modeBtn) {
 document.addEventListener("DOMContentLoaded", () => {
   aplicarModo();
 });
+
+// Expor funções usadas por atributos inline onclick (arquivo é um módulo)
+window.toggleEstoque = toggleEstoque;
+window.openConfirm = openConfirm;
