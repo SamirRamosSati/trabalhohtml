@@ -353,25 +353,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed rgba(0, 0, 0, 0.08);
+  border: 2px dashed rgba(255, 255, 255, 0.06);
   height: 220px;
   border-radius: var(--radius);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.01),
-    rgba(0, 0, 0, 0.01)
-  );
+  /* lighter gray background to match banner */
+  background: #3a3a3a;
   cursor: pointer;
   transition: background var(--anim-duration), transform var(--anim-duration);
-  color: var(--muted);
+  color: #d7d7d7;
 }
 .add-card:hover {
   transform: translateY(-6px);
-  background: linear-gradient(
-    180deg,
-    rgba(14, 165, 164, 0.06),
-    rgba(14, 165, 164, 0.02)
-  );
+  /* subtle lightening on hover */
+  background: #444444;
   color: var(--accent);
 }
 #settingsBtn {
