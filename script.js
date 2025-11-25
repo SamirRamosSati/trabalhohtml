@@ -237,7 +237,14 @@ const themeEls = {
 function applyTheme() {
   document.documentElement.style.setProperty("--primary", theme.primary);
   document.documentElement.style.setProperty("--accent", theme.accent);
-  document.documentElement.style.setProperty("--page-bg", theme.pageBg);
+  // Se o tema salvo usa a referência "var(--page-bg)" então
+  // não sobrescrevemos o valor root — removemos a propriedade inline
+  // para permitir que o CSS em `:root` controle a cor de fundo.
+  if (theme.pageBg && !theme.pageBg.trim().startsWith("var(")) {
+    document.documentElement.style.setProperty("--page-bg", theme.pageBg);
+  } else {
+    document.documentElement.style.removeProperty("--page-bg");
+  }
   document.documentElement.style.setProperty("--card-bg", theme.cardBg);
   document.documentElement.style.setProperty("--text", theme.text);
   document.documentElement.style.setProperty("--radius", theme.radius + "px");
@@ -250,10 +257,18 @@ function applyTheme() {
     theme.anim + "ms"
   );
   document.body.classList.toggle("dark", theme.dark);
-  if (theme.logo) document.getElementById("logoImg").src = theme.logo;
-  document.getElementById("logoImg").style.display = theme.logo
-    ? "block"
-    : "none";
+  const logoEl = document.getElementById("logoImg");
+  if (logoEl) {
+    // Mostrar sempre o logo: se o usuário carregou um logo no tema, usa ele,
+    // senão usa o arquivo local `./logo.png` como fallback.
+    if (theme.logo) {
+      logoEl.src = theme.logo;
+    } else {
+      // fallback para a imagem local no projeto
+      logoEl.src = "./logo.png";
+    }
+    logoEl.style.display = "block";
+  }
 }
 
 if (themeEls.primary)
