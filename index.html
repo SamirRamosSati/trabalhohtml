@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vitrine - Personalizável</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img id="logoImg" alt="logo" />
+        <div>
+          <div class="title" id="vitrineTitle">Vitrine de Produtos</div>
+          <div class="sub">Catálogo • Importados</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="top-row">
+        <div class="search">
+          <input id="searchInput" placeholder="Buscar produtos..." />
+        </div>
+        <div class="banner">Novidades • Selecionadas para você</div>
+      </div>
+
+      <div id="categories" class="categories"></div>
+      <div id="categoriesContainer"></div>
+    </main>
+
+    <button id="settingsBtn" title="Configurações">⚙</button>
+
+    <div id="settingsPanel">
+      <h4>Personalização da Vitrine</h4>
+
+      <div class="setting-row">
+        <label>Cor do Título</label>
+        <input id="titleColor" type="color" value="#111827" />
+      </div>
+
+      <div class="setting-row">
+        <label>Alterar título</label>
+        <input type="text" id="titleInput" value="Vitrine de Produtos" />
+        <button onclick="alterarTitulo()">Salvar</button>
+      </div>
+
+      <div class="setting-row">
+        <label>Tema</label>
+        <div style="display: flex; gap: 6px">
+          <button class="btn" id="setLight">Claro</button>
+          <button class="btn" id="setDark">Escuro</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <label>Cor Primária</label
+        ><input id="headerBg" type="color" value="#111827" />
+      </div>
+      <div class="setting-row">
+        <label>Cor de Destaque</label
+        ><input id="accentColor" type="color" value="#0ea5a4" />
+      </div>
+      <div class="setting-row">
+        <label>Fundo da Página</label
+        ><input id="pageBg" type="color" value="#f5f7fb" />
+      </div>
+      <div class="setting-row">
+        <label>Cor dos Cards</label
+        ><input id="cardBg" type="color" value="#ffffff" />
+      </div>
+      <div class="setting-row">
+        <label>Cor do Texto</label
+        ><input id="textColor" type="color" value="#111827" />
+      </div>
+      <div class="setting-row">
+        <label>Borda (px)</label
+        ><input id="radiusRange" type="range" min="6" max="28" value="12" />
+      </div>
+      <div class="setting-row">
+        <label>Sombra (%)</label
+        ><input id="shadowRange" type="range" min="1" max="40" value="8" />
+      </div>
+      <div class="setting-row">
+        <label>Animação</label>
+        <select id="animSelect">
+          <option value="280">Suave</option>
+          <option value="150">Rápida</option>
+          <option value="420">Lenta</option>
+          <option value="0">Desligar</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 6px; margin-top: 10px">
+        <button
+          id="saveTheme"
+          class="btn"
+          style="background: var(--accent); color: #fff"
+        >
+          Salvar Tema
+        </button>
+        <button id="resetTheme" class="btn" style="background: #eee">
+          Resetar
+        </button>
+      </div>
+
+      <hr
+        style="
+          margin: 12px 0;
+          border: none;
+          height: 1px;
+          background: rgba(0, 0, 0, 0.04);
+        "
+      />
+
+      <div style="font-size: 13px; color: var(--muted)">Logo</div>
+      <input
+        id="logoInput"
+        type="file"
+        accept="image/*"
+        style="margin-top: 8px"
+      />
+
+      <div style="margin-top: 10px; font-size: 13px; color: var(--muted)">
+        <div>
+          <strong>Salvar local:</strong> as mudanças ficam no seu navegador
+        </div>
+      </div>
+    </div>
+
+    <footer>©️ 2025 Vitrine • Feito para personalização</footer>
+
+    <!-- BOTÃO: Alternar modo (fora de qualquer <script>) -->
+    <button
+      id="modeBtn"
+      style="
+        position: fixed;
+        left: 18px;
+        bottom: 18px;
+        z-index: 100;
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 12px 14px;
+        border-radius: 14px;
+        cursor: pointer;
+      "
+    >
+      👁️ Modo Cliente
+    </button>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

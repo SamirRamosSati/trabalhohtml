@@ -1,0 +1,92 @@
+export const INITIAL_PRODUCTS = {
+  eletronicos: [
+    {
+      nome: "Fone Bluetooth",
+      preco: "199,90",
+      img: "https://i.pinimg.com/736x/70/95/d7/7095d7fe1b10b8d40016533826c89c1e.jpg",
+      desc: "Fone sem fio com ótima bateria.",
+      fora: false,
+    },
+    {
+      nome: "Mouse Gamer",
+      preco: "149,90",
+      img: "https://os-jo.com/image/cache/catalog/products/Accessories/Mouse/Logitech-G703-Wireless/Logitech-G703-LIGHTSPEED-Gaming-Mouse-with-POWERPLAY-Wireless-Charging-Compatibility.jpg_Q90.jpg_-1200x1200.jpg",
+      desc: "Mouse rápido com luz RGB.",
+      fora: false,
+    },
+    {
+      nome: "Caixa de Som",
+      preco: "299,90",
+      img: "https://http2.mlstatic.com/D_NQ_NP_2X_724768-MLA95664951172_102025-F.webp",
+      desc: "Som potente e grave reforçado.",
+      fora: false,
+    },
+    {
+      nome: "Teclado Mecânico",
+      preco: "249,90",
+      img: "https://m.media-amazon.com/images/I/61fjJX9Jq2L._AC_UL480_FMwebp_QL65_.jpg",
+      desc: "Teclado com switches silenciosos.",
+      fora: false,
+    },
+  ],
+  moda: [
+    {
+      nome: "Camisa Estilosa",
+      preco: "79,90",
+      img: "https://berzerk.com.br/cdn/shop/files/POLIAMIDA_TECH_AZUL_1000x.jpg?v=1754521469",
+      desc: "Camisa moderna e confortável.",
+      fora: false,
+    },
+    {
+      nome: "Tênis Casual",
+      preco: "199,90",
+      img: "https://static.netshoes.com.br/produtos/tenis-couro-democrata-bold-masculino/93/D83-3491-793/D83-3491-793_zoom1.jpg?ts=1763176848&ims=326x",
+      desc: "Tênis leve ideal para o dia a dia.",
+      fora: false,
+    },
+    {
+      nome: "Boné Preto",
+      preco: "49,90",
+      img: "https://m.media-amazon.com/images/I/41D67XxX2UL._AC_SX679_.jpg",
+      desc: "Boné básico estiloso.",
+      fora: false,
+    },
+    {
+      nome: "Jaqueta Jeans",
+      preco: "149,90",
+      img: "https://img.ltwebstatic.com/images3_spmp/2024/04/21/7d/1713710212861222f65f50b5a3a405d741a7dcf1c0_thumbnail_900x.webp",
+      desc: "Jaqueta resistente e estilosa.",
+      fora: false,
+    },
+  ],
+  beleza: [
+    {
+      nome: "Perfume Floral",
+      preco: "89,90",
+      img: "https://i.pinimg.com/736x/79/0f/a0/790fa0c79071b9af8f944beaf7ba7cf9.jpg",
+      desc: "Aroma suave e elegante.",
+      fora: false,
+    },
+    {
+      nome: "Batom Matte",
+      preco: "39,90",
+      img: "https://i.pinimg.com/1200x/b4/74/55/b474559405c1ae91deeb112dc194f5d3.jpg",
+      desc: "Batom de longa duração.",
+      fora: false,
+    },
+    {
+      nome: "Base Líquida",
+      preco: "59,90",
+      img: "https://m.media-amazon.com/images/I/610JEkwRMrL._AC_UL480_FMwebp_QL65_.jpg",
+      desc: "Alta cobertura e acabamento natural.",
+      fora: false,
+    },
+    {
+      nome: "Creme Facial",
+      preco: "29,90",
+      img: "https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_1800,c_limit/e_trim/v1/imagens/product/102585/e2f31c60-2550-4ea2-b75d-af102e404f0d-102585-vult-care-creme-reparador-facial-100g.png",
+      desc: "Hidratação intensa para a pele.",
+      fora: false,
+    },
+  ],
+};
